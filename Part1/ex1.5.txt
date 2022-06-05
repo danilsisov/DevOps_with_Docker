@@ -1,0 +1,50 @@
+1) docker pull devopsdockeruh/simple-web-service:alpine
+2) docker pull devopsdockeruh/simple-web-service:ubuntu
+
+sizes:
+docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   14 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   14 months ago   15.7MB
+
+ubuntu:
+docker run -d -it --name ubu devopsdockeruh/simple-web-service:ubuntu
+f52c1d759c9a9f85c8747f1c857d9d8e8342a1c677329f536c3332479f0573d0
+docker exec -it ubu bash
+
+ubuntu bash:
+root@f52c1d759c9a:/usr/src/app# tail -f ./text.log
+2022-06-05 17:27:11 +0000 UTC
+2022-06-05 17:27:13 +0000 UTC
+2022-06-05 17:27:15 +0000 UTC
+2022-06-05 17:27:17 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-06-05 17:27:19 +0000 UTC
+2022-06-05 17:27:21 +0000 UTC
+2022-06-05 17:27:23 +0000 UTC
+2022-06-05 17:27:25 +0000 UTC
+2022-06-05 17:27:27 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-06-05 17:27:29 +0000 UTC
+
+alpine:
+docker run -d -it --name alpi devopsdockeruh/simple-web-service:alpine
+1cd48b87baa147d9fc2a68a442221eb0a13d6982fa1d48a7e65423568050dd20
+docker exec -it alpi sh
+
+alipne sh:
+/usr/src/app # tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-06-05 17:28:17 +0000 UTC
+2022-06-05 17:28:19 +0000 UTC
+2022-06-05 17:28:21 +0000 UTC
+2022-06-05 17:28:23 +0000 UTC
+2022-06-05 17:28:25 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-06-05 17:28:27 +0000 UTC
+2022-06-05 17:28:29 +0000 UTC
+2022-06-05 17:28:31 +0000 UTC
+2022-06-05 17:28:33 +0000 UTC
+2022-06-05 17:28:35 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-06-05 17:28:37 +0000 UTC

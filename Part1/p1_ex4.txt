@@ -1,7 +1,9 @@
 1) docker run ubuntu
 2) docker run -d -it --rm --name test ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website'
 dec0161b34ba39727bf15cb3cacc930d028639d478724902d1a1d98ea88b6ebd
-3) docker exec -it test
+
+--bash
+3) docker exec -it test bash
 4) apt-get update && apt-get updgrade
 5) apt-get install curl
 6) root@dec0161b34ba:/# curl helsinki.fi

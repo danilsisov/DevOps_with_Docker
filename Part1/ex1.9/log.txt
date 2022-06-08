@@ -1,0 +1,9 @@
+Starting log output
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory

@@ -1,1 +1,2 @@
-ubuntu@sisov:~$ docker run -v "$pwd/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+ubuntu@sisov:~$ touch text.log
+ubuntu@sisov:~$ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service

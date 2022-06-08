@@ -1,0 +1,3 @@
+ubuntu@sisov:~$ docker run -p 1234:8080 devopsdockeruh/simple-web-service server
+ubuntu@sisov:~$ curl localhost:1234
+{"message":"You connected to the following path: /","path":"/"}

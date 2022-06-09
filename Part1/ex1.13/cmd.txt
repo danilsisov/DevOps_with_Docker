@@ -1,0 +1,5 @@
+ubuntu@sisov:~/ex11/material-applications/example-backend$ docker build . -t project
+ubuntu@sisov:~/ex11/material-applications/example-backend$ docker run -t -p 8080:8080 project
+
+ubuntu@sisov:~$ curl localhost:8080/ping
+pong

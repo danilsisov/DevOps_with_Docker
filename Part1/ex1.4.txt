@@ -4,7 +4,7 @@ dec0161b34ba39727bf15cb3cacc930d028639d478724902d1a1d98ea88b6ebd
 
 --bash
 3) docker exec -it test bash
-4) apt-get update && apt-get updgrade
+4) apt-get update && apt-get upgrade
 5) apt-get install curl
 6) root@dec0161b34ba:/# curl helsinki.fi
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">

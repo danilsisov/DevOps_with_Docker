@@ -1,0 +1,2 @@
+ubuntu@sisov:~/ex11/material-applications/example-frontend$ docker build . --tag front
+ubuntu@sisov:~/ex11/material-applications/example-frontend$ docker run -d -p 5000:5000 front

@@ -1,0 +1,8 @@
+services:
+    simple-web-service:
+      image: devopsdockeruh/simple-web-service
+      container_name: ex2
+      ports:
+        - 8080:8080
+      command: docker run -d -it --name ex2 devopsdockeruh/simple-web-service
+

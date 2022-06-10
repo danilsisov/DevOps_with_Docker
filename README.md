@@ -1,5 +1,4 @@
 # DevOps course 2022
-
 Helsinki University DevOps course 2022
 
 ## Time

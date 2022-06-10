@@ -1,0 +1,1 @@
+ubuntu@sisov:~/2.2$ docker-compose up -d

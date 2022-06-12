@@ -10,6 +10,8 @@ services:
 
   backend:
     image: back
+    environment:
+      - REDIS_HOST=re
     ports:
       - 8080:8080
     container_name: backend
@@ -17,7 +19,7 @@ services:
   redis:
     image: redis
     ports:
-      - 5050:5050
+      - 6379:6379
     container_name: re
 
 

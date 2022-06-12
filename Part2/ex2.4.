@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: front
+    ports:
+      - 5000:5000
+    container_name: frontend
+
+  backend:
+    image: back
+    ports:
+      - 8080:8080
+    container_name: backend
+
+  redis:
+    image: redis
+    ports:
+      - 5050:5050
+    container_name: re
+
+

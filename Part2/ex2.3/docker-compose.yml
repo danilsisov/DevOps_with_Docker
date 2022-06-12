@@ -5,11 +5,11 @@ services:
   frontend:
     image: front
     ports:
-       - 5000:5000
+      - 5000:5000
     container_name: frontend
 
-   backend:
-     build: back
-     ports:
-       - 8080:8080
-     container_name: backend
+  backend:
+    image: back
+    ports:
+      - 8080:8080
+    container_name: backend

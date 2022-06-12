@@ -9,7 +9,7 @@ services:
     container_name: frontend
 
    backend:
-      build: ./material-applications/backend
-      ports:
-        - 8080:8080
-      container_name: backend
+     build: ./material-applications/backend
+     ports:
+       - 8080:8080
+     container_name: backend

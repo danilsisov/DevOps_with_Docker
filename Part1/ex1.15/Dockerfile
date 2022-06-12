@@ -8,3 +8,5 @@ RUN apt-get install -y python
 
 CMD ["python", "calculator.py"]
 
+
+# Link: https://hub.docker.com/repository/docker/danilsh/test

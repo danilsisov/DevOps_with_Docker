@@ -1,0 +1,49 @@
+  GNU nano 6.2                                                          docker-compose.yml                                                                   version: '3.8'
+
+services:
+
+  frontend:
+    image: ml-front
+    ports:
+      - 3000:3000
+    container_name: ml-frontend
+
+  backend:
+    image: ml-back
+    ports:
+      - 5000:5000
+    depends_on:
+      - training
+    volumes:
+      - model:/src/app/model
+    container_name: ml-backend
+
+  training:
+    image: training
+    volumes:
+      - imgs:/src/app/imgs
+      - model:/src/app/model
+    container_name: training
+
+  proxy:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/src/app/nginx.conf
+    container_name: proxy
+
+
+volumes:
+  imgs:
+  model:
+  nginx.conf:
+
+
+
+
+
+
+
+
+

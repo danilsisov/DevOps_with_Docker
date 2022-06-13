@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: front
+    ports:
+      - 5000:5000
+    container_name: frontend
+
+  backend:
+    image: back
+    enviroment:
+      - REDIS_HOST = re
+      - POSTGRES_HOST = postgre
+      - POSTGRES_USER = postgres
+      - POSTGRES_PASSWORD = postgres
+      - POSTGRES_DATABASE = postgres
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+      - redis
+    container_name: backend
+
+  redis:
+    image: redis
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    container_name: re
+
+  db:
+    postgres: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER = postgres
+      - POSTGRES_PASSWORD = postgres
+    volumes:
+      - database:/var/lib/data
+    container_name: postgre
+
+volumes:
+  database:

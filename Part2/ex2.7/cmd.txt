@@ -1,0 +1,6 @@
+mkdir front
+git clone https://github.com/docker-hy/ml-kurkkumopo-frontend.git
+mkdir back
+git clone https://github.com/docker-hy/ml-kurkkumopo-backend.git
+mkdir traning
+git clone https://github.com/docker-hy/ml-kurkkumopo-training.git

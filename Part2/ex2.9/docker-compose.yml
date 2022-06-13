@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: ml-front
+    ports:
+      - 3000:3000
+    container_name: ml-frontend
+
+  backend:
+    image: ml-back
+    environment:
+      - REDIS_HOST=re
+      - POSTGRES_HOST=postgre
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DATABASE=postgres
+    ports:
+      - 5000:5000
+    depends_on:
+      - training
+      - db
+      - redis
+    volumes:
+      - model:/src/app/model
+    container_name: ml-backend
+
+  training:
+    image: training
+    volumes:
+      - imgs:/src/app/imgs
+      - model:/src/app/model
+    container_name: training
+
+  redis:
+    image: redis
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    container_name: redi
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - database:/var/lib/data
+    container_name: postgress
+
+
+volumes:
+  imgs:
+  model:
+  database:

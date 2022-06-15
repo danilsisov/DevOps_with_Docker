@@ -3,11 +3,10 @@
 git clone https://github.com/docker-hy/docker-hy.github.io
 
 docker build . --tag ex3.2
-docker run -it ex3.2
 
 docker login
-sudo docker tag ex3.2 danilsh/ex3.2
-sudo docker push danilsh/ex3.2
+docker tag ex3.2 danilsh/ex3.2
+docker push danilsh/ex3.2
 
 
 

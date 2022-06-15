@@ -3,9 +3,9 @@ WORKDIR /usr/app/src
 
 COPY . .
 
-RUN apt-get update -y && apt-get install sudo -y
+RUN apt-get update -y
 RUN apt-get install git -y && apt-get install docker.io -y
 
-RUN chmod +x script
+RUN chmod +x script.sh
 
-ENTRYPOINT ["sh", "./script"]
+ENTRYPOINT /usr/src/app/script.sh; /bin/bash

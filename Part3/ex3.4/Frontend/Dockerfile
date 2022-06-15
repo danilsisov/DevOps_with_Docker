@@ -16,5 +16,6 @@ RUN apt-get update && \
         rm -rf /var/lib/apt/lists/* && \
         useradd -m appuser
 
+USER appuser
 
 CMD ["serve", "-s", "-l", "5000", "build"]

@@ -1,3 +1,4 @@
+#BUILD
 FROM node:16-alpine as build
 
 WORKDIR /usr/src/app

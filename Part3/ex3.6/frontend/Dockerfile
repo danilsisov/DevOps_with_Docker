@@ -1,4 +1,3 @@
-  GNU nano 6.2                                          Dockerfile                                                   #BUILD
 FROM node:16-alpine as build
 
 WORKDIR /usr/src/app
@@ -14,8 +13,8 @@ EXPOSE 5000
 ENV REACT_APP_BACKEND_URL=http://localhost:8080
 
 WORKDIR /usr/src/app
-COPY --from=build /usr/src/app/build /
 
+COPY --from=build /usr/src/app/build /
 RUN npm install -g serve && \
         adduser -D userr && \
         rm -rf /var/lib/apt/lists/*

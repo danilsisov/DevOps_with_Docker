@@ -1,3 +1,3 @@
 Old DockefiLe - 125 MB
 
-New Dockerfile - 7.64M B
+New Dockerfile - 7.64 MB
